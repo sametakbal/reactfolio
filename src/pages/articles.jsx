@@ -11,11 +11,15 @@ import SEO from "../data/seo";
 import myArticles from "../data/articles";
 
 import "./styles/articles.css";
+import { useTranslation } from "react-i18next";
 
 const Articles = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
+
+	const { i18n } = useTranslation();
+
 
 	const currentSEO = SEO.find((item) => item.page === "articles");
 
@@ -40,13 +44,6 @@ const Articles = () => {
 					</div>
 
 					<div className="articles-main-container">
-						<div className="title articles-title">
-							{INFO.articles.title}
-						</div>
-
-						<div className="subtitle articles-subtitle">
-							{INFO.articles.description}
-						</div>
 
 						<div className="articles-container">
 							<div className="articles-wrapper">
@@ -57,10 +54,11 @@ const Articles = () => {
 									>
 										<Article
 											key={(index + 1).toString()}
-											date={article().date}
+											date={i18n.language === 'tr' ? article().date[0] : article().date[1]}
+											readArticle={i18n.language === 'tr' ? 'Makaleyi oku' : 'Read article'}
 											title={article().title}
 											description={article().description}
-											link={"/article/" + (index + 1)}
+											link={article().link}
 										/>
 									</div>
 								))}

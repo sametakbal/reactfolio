@@ -5,39 +5,53 @@ import Card from "../common/card";
 
 import "./styles/works.css";
 
+const experiences = [
+	{
+		logo: "./infonal.png",
+		company: "Infonal",
+		role: "Yazılım Mühendisi",
+		duration: "Ocak 2023 - Devam Ediyor"
+	},
+	{
+		logo: "./iqb.png",
+		company: "IQB Solutions",
+		role: "Jr. Yazılım Mühendisi",
+		duration: "Eylül 2021 - Aralık 2022"
+	},
+	{
+		logo: "./h2hsecure.png",
+		company: "H2HSecure",
+		role: "Jr. Yazılım Mühendisi",
+		duration: "Ocak 2021 - Eylül 2021"
+	}
+];
+
 const Works = () => {
 	return (
 		<div className="works">
 			<Card
 				icon={faBriefcase}
-				title="Work"
+				title="Deneyim"
 				body={
 					<div className="works-body">
-						<div className="work">
-							<img
-								src="./facebook.png"
-								alt="facebook"
-								className="work-image"
-							/>
-							<div className="work-title">Facebook</div>
-							<div className="work-subtitle">
-								Software Engineer
+						{experiences.map((experience, index) => (
+							<div className="work" key={index}>
+								<img
+									src={experience.logo}
+									alt={experience.company}
+									className="work-image"
+								/>
+								<div className="work-title">
+									{experience.company}
+								</div>
+								<div className="work-subtitle">
+									{experience.role}
+								</div>
+								<div className="work-duration">
+									{experience.duration}
+								</div>
 							</div>
-							<div className="work-duration">2019 - Present</div>
-						</div>
-
-						<div className="work">
-							<img
-								src="./twitter.png"
-								alt="twitter"
-								className="work-image"
-							/>
-							<div className="work-title">Twitter</div>
-							<div className="work-subtitle">
-								Software Engineer
-							</div>
-							<div className="work-duration">2019 - Present</div>
-						</div>
+						))}
 					</div>
 				}
 			/>

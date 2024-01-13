@@ -1,24 +1,28 @@
 const INFO = {
 	main: {
-		title: "Reactfolio by truethari",
-		name: "Tharindu N.",
-		email: "mail@tharindu.dev",
+		title: "Samet AKBAL",
+		name: "",
+		email: "sametakbal7@gmail.com",
 		logo: "../logo.png",
 	},
 
 	socials: {
-		twitter: "https://twitter.com/",
-		github: "https://github.com/",
-		linkedin: "https://linkedin.com/",
-		instagram: "https://instagram.com/",
+		twitter: "https://x.com/akbaldev",
+		github: "https://github.com/sametakbal",
+		linkedin: "https://www.linkedin.com/in/sametakbal/",
+		instagram: "https://www.instagram.com/samet.akbal",
 		stackoverflow: "https://stackoverflow.com/",
 		facebook: "https://facebook.com/",
 	},
 
 	homepage: {
-		title: "Full-stack web and mobile app developer, and amateur astronaut.",
-		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.",
+		title: ["Yazılım Mühendisi", "Software Engineer"],
+		description: [`Merhaba! Ben Samet AKBAL, üç yıldan fazla süredir Java teknolojileriyle uğraşan bir yazılım geliştiriciyim. React, Vue ve Angular gibi modern framework'lerle çalışarak, ilişkisel ve ilişkisel olmayan veritabanlarıyla projeler geliştirdim. Ayrıca, edindiğim bilgi ve deneyimleri paylaşmak adına YouTube'da video dersleri hazırlıyorum.
+
+		Yaratıcı çözümler üretmeye olan tutkum ve sürekli öğrenme arzumla öne çıkıyorum. Sorularınız veya işbirliği teklifleri için her zaman buradayım. İletişime geçmekten çekinmeyin!`,
+			`Hello! I'm Samet AKBAL, a software developer with over three years of experience in Java technologies. I've worked with modern frameworks like React, Vue, and Angular, developing projects with relational and non-relational databases. Additionally, I create video tutorials on YouTube to share my knowledge and experiences.
+
+			I stand out with my passion for creative solutions and a constant desire for learning. I'm always here for any questions or collaboration opportunities. Feel free to reach out!`],
 	},
 
 	about: {
@@ -35,48 +39,28 @@ const INFO = {
 
 	projects: [
 		{
-			title: "Project 1",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
+			id: 1,
+			title: "Spring Boot Tutorial",
+			description: ["Github'da ve Youtube'da paylaştığım Spring Boot ile ilgili çalışmalarımı içerir.", "It contains my works on Spring Boot that I share on Github and Youtube."],
+			logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/512px-Spring_Boot.svg.png",
+			linkText: "viewProject",
+			link: "https://github.com/sametakbal/tutorials",
 		},
-
 		{
-			title: "Project 2",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
-			linkText: "View Project",
-			link: "https://github.com",
+			id: 2,
+			title: "Hibernate Clone",
+			description: ["Core Java ile Hibernate ORM implementasyonu.", "Hibernate ORM implementation with Core Java."],
+			logo: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png",
+			linkText: "viewProject",
+			link: "https://kips.vercel.app/",
 		},
-
 		{
-			title: "Project 3",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
-			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 4",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 5",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
+			id: 3,
+			title: "Kips | E-Commerce",
+			description: ["React ve Firebase nosql veritabanını kullanarak geliştirdiğim e-ticaret platformu.", "E-commerce platform I developed using React and Firebase."],
+			logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+			linkText: "viewProject",
+			link: "https://kips.vercel.app/",
 		},
 	],
 };

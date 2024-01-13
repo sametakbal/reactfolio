@@ -2,38 +2,35 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./styles/footer.css";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+	const { t } = useTranslation();
 	return (
-		<React.Fragment>
-			<div className="footer">
-				<div className="footer-links">
-					<ul className="footer-nav-link-list">
-						<li className="footer-nav-link-item">
-							<Link to="/">Home</Link>
-						</li>
-						<li className="footer-nav-link-item">
-							<Link to="/about">About</Link>
-						</li>
-						<li className="footer-nav-link-item">
-							<Link to="/projects">Projects</Link>
-						</li>
-						<li className="footer-nav-link-item">
-							<Link to="/articles">Articles</Link>
-						</li>
-						<li className="footer-nav-link-item">
-							<Link to="/contact">Contact</Link>
-						</li>
-					</ul>
-				</div>
+		<div className="footer">
+			<div className="footer-links">
+				<ul className="footer-nav-link-list">
+					<li className="footer-nav-link-item">
+						<Link to="/">{t('home')}</Link>
+					</li>
+					<li className="footer-nav-link-item">
+						<Link to="/projects">{t('projects')}</Link>
+					</li>
+					<li className="footer-nav-link-item">
+						<Link to="/articles">{t('articles')}</Link>
+					</li>
+					<li className="footer-nav-link-item">
+						<Link to="/contact">{t('contact')}</Link>
+					</li>
+				</ul>
+			</div>
 
-				<div className="footer-credits">
-					<div className="footer-credits-text">
-						© 2023 Tharindu.dev. All Rights Reserved.
-					</div>
+			<div className="footer-credits">
+				<div className="footer-credits-text">
+					© 2024 by Samet Akbal
 				</div>
 			</div>
-		</React.Fragment>
+		</div>
 	);
 };
 

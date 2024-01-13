@@ -10,15 +10,16 @@ Live demo here: <a href="https://reactfolio.tharindu.dev/" target="_blank">react
 <br/>
 Readme here: <a href="https://tharindu.dev/portfolio/reactfolio/" target="_blank">tharindu.dev/portfolio/reactfolio/</a>
 
--   [Features](#-features)
--   [Getting started](#-getting-started)
--   [Installation and Setup Instructions](#-installation-and-setup-instructions)
--   [Folder structure](#-folder-structure)
--   [Configurations](#-configurations)
--   [Google Analytics](#-google-analytics)
--   [Building the React App](#-building-the-react-app)
--   [FAQ](#-faq)
--   [Contribution](#-contribution)
+- [Reactfolio V1.2 👩🏽‍🚀](#reactfolio-v12-)
+  - [📙 Features](#-features)
+  - [📚 Getting started](#-getting-started)
+  - [🛠 Installation and Setup Instructions](#-installation-and-setup-instructions)
+  - [📁 Folder structure](#-folder-structure)
+  - [⚙️ Configurations](#️-configurations)
+  - [📈 Google Analytics](#-google-analytics)
+  - [🚀 Building the React App](#-building-the-react-app)
+  - [🤔 FAQ](#-faq)
+  - [🌱 Contribution](#-contribution)
 
 ## 📙 Features
 
@@ -156,7 +157,7 @@ Directory: `/src/data/`
     	/* ---------------------- */
 
     	/* ------- fonts ------- */
-    	--primary-font: "Heebo", sans-serif;
+    	--primary-font: "Calibri", sans-serif;
     	--secondary-font: "Roboto", sans-serif;
     	/* --------------------- */
     }

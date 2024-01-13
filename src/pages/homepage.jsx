@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faTwitter,
 	faGithub,
-	faStackOverflow,
 	faInstagram,
+	faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
@@ -22,19 +22,20 @@ import SEO from "../data/seo";
 import myArticles from "../data/articles";
 
 import "./styles/homepage.css";
+import { useTranslation } from "react-i18next";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
-
+	const { i18n } = useTranslation();
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
 	useEffect(() => {
 		const handleScroll = () => {
-			let scroll = Math.round(window.pageYOffset, 2);
+			let scroll = Math.round(window.scrollY, 2);
 
 			let newLogoSize = 80 - (scroll * 4) / 10;
 
@@ -92,11 +93,11 @@ const Homepage = () => {
 						<div className="homepage-first-area">
 							<div className="homepage-first-area-left-side">
 								<div className="title homepage-title">
-									{INFO.homepage.title}
+									{i18n.language === 'tr' ? INFO.homepage.title[0] : INFO.homepage.title[1]}
 								</div>
 
 								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.description}
+									{i18n.language === 'tr' ? INFO.homepage.description[0] : INFO.homepage.description[1]}
 								</div>
 							</div>
 
@@ -115,16 +116,6 @@ const Homepage = () => {
 
 						<div className="homepage-socials">
 							<a
-								href={INFO.socials.twitter}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faTwitter}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
 								href={INFO.socials.github}
 								target="_blank"
 								rel="noreferrer"
@@ -135,12 +126,22 @@ const Homepage = () => {
 								/>
 							</a>
 							<a
-								href={INFO.socials.stackoverflow}
+								href={INFO.socials.linkedin}
 								target="_blank"
 								rel="noreferrer"
 							>
 								<FontAwesomeIcon
-									icon={faStackOverflow}
+									icon={faLinkedin}
+									className="homepage-social-icon"
+								/>
+							</a>
+							<a
+								href={INFO.socials.twitter}
+								target="_blank"
+								rel="noreferrer"
+							>
+								<FontAwesomeIcon
+									icon={faTwitter}
 									className="homepage-social-icon"
 								/>
 							</a>
@@ -179,10 +180,11 @@ const Homepage = () => {
 									>
 										<Article
 											key={(index + 1).toString()}
-											date={article().date}
+											date={i18n.language === 'tr' ? article().date[0] : article().date[1]}
+											readArticle={i18n.language === 'tr' ? 'Makaleyi oku' : 'Read article'}
 											title={article().title}
 											description={article().description}
-											link={"/article/" + (index + 1)}
+											link={article().link}
 										/>
 									</div>
 								))}
